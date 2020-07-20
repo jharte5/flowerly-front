@@ -6,7 +6,7 @@ import axios from '../lib/Axios/Axios'
 export const signupApi = (userInfo) =>  async (dispatch) => {
     console.log(userInfo)
     try {
-        await axios.post('/api/users/sign-up', userInfo)
+        await axios.post('/users/sign-up', userInfo)
         return Promise.resolve()
     }catch (e) {
         console.log(JSON.stringify(e))
@@ -21,7 +21,7 @@ export const signupApi = (userInfo) =>  async (dispatch) => {
 export const loginApi = (userInfo) => async (dispatch) => {
     try {
         let success = await axios.post(
-            "/api/users/login",
+            "/users/login",
             userInfo
         );
         const { jwtToken } = success.data;

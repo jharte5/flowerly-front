@@ -6,6 +6,7 @@ import {successToast, failureToast} from '../Toastify/Toast'
 import {loginApi} from '../../redux/actions/authUserActions'
 import {connect} from 'react-redux'
 import {checkToken} from '../PrivateRoute/CheckToken'
+import './Login.css'
 
 export class Login extends Component {
     state = {
@@ -175,6 +176,51 @@ export class Login extends Component {
                     />
                 </form>
             </div>
+//             <body>
+//     <div class="box">
+//       <div class="icon"><i class="fas fa-user-alt"></i></div>
+//       <form id="login" action="#">
+//         <h1>Login</h1>
+//         <h2>Email</h2>
+//         <input class="email" type="text"/>
+//         <h2>Password</h2>
+//         <div class="input-box">
+//           <i class="far fa-eye eye-btn"></i>
+//           <input class="password" type="password"/>
+//         </div>
+//         <button type="submit" value="Login">Login</button>
+//         <span class="grey forgot"><a href="#">Forgot your password?</a></span>
+//         <span class="grey signup">Don't have an account? <a href="#" class="signup-btn">Sign up</a></span>
+//       </form>
+      
+//       <form id="signup">
+//         <h1>Sign Up</h1>
+//         <h2>Pick a username</h2>
+//         <div class="input-box">
+//           <input class="username" type="text"/>
+//         </div>
+//         <h2>Enter an e-mail</h2>
+//         <div class="input-box">
+//           <input class="e-mail" type="text" placeholder="example@mail.com"/>
+//         </div>
+//         <div class="input-box">
+//           <input class="password" type="password" placeholder="Repeat your e-mail" disabled/>
+//         </div>
+//         <h2>Choose a password</h2>
+//         <div class="passwords-box">
+//           <div class="input-box">
+//             <i class="far fa-eye eye-btn" alt="looll"></i>
+//             <input class="password" type="password"/>
+//           </div>
+//           <div class="input-box">
+//             <input class="input re" type="password" placeholder="Repeat your password" disasbled/>
+//           </div>
+//         </div>
+//         <button type="submit" value="Sign Up">Sign Up</button>
+//         <span class="grey login">Signed up already? <a href="#">Log in</a></span>
+//       </form>
+//     </div>
+//   </body>
         )
     }
 }
