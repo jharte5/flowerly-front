@@ -1,4 +1,4 @@
-import setAuthToken from '../lib/Axios/setAuthToken'
+import setAuthToken from '../lib/Axios/SetAuthToken'
 import jwt_decode from "jwt-decode";
 import { SIGN_UP, LOGIN, LOGOUT} from '../constants/authUserConstants'
 import axios from '../lib/Axios/Axios'
