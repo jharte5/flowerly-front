@@ -7,7 +7,7 @@ import validator from 'validator'
 import InputGroup from '../SharedGroup/InputGroup';
 import ButtonGroup from '../SharedGroup/ButtonGroup'
 
-export default class Signup extends Component {
+export class Signup extends Component {
     state = {
         canSubmit: true,
         formSetting: {

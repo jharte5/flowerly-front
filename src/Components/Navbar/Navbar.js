@@ -5,7 +5,7 @@ import AuthNavLink from './AuthNavLink'
 import UnAuthNavLink from './UnAuthNavLink'
 import './Navbar.css'
 
-export default class Navbar extends Component {
+export class Navbar extends Component {
     render() {
         const { isAuthenticated, user} = this.props.authUser
         return (

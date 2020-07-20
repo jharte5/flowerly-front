@@ -3,11 +3,11 @@ import validator from 'validator'
 import InputGroup from '../SharedGroup/InputGroup'
 import ButtonGroup from '../SharedGroup/ButtonGroup'
 import {successToast, failureToast} from '../Toastify/Toast'
-import {login} from '../../redux/actions/authUserActions'
+import {loginApi} from '../../redux/actions/authUserActions'
 import {connect} from 'react-redux'
 import {checkToken} from '../PrivateRoute/CheckToken'
 
-export default class Login extends Component {
+export class Login extends Component {
     state = {
         canSubmit: true,
         formSetting: {
@@ -121,8 +121,7 @@ export default class Login extends Component {
         const { email, password } = this.state.formConfig;
         try {
             console.log("MAybe??", email.value)
-            await this.props.login({
-    
+            await this.props.loginApi({
                 email:email.value,
                 password: password.value,
             })
@@ -142,6 +141,13 @@ export default class Login extends Component {
     };
     
     render() {
+        const { canSubmit, formSetting } = this.state;
+        let inputArray = [];
+        for (let key in formSetting) {
+            inputArray.push({
+                formSetting: formSetting[key],
+            });
+        }
         return (
             <div className="signup-container">
                 <h1>Login</h1>
@@ -164,7 +170,7 @@ export default class Login extends Component {
                     })}
                     <ButtonGroup
                         buttonStyle="form-button"
-                        title="Sign in"
+                        title="Login Here"
                         disabled={canSubmit}
                     />
                 </form>
@@ -175,4 +181,4 @@ export default class Login extends Component {
 
 const mapStateToProps = (state) => ({});
 
-export default connect(mapStateToProps, {login})(Login);
+export default connect(mapStateToProps, {loginApi})(Login);
