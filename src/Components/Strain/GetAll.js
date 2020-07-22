@@ -8,7 +8,6 @@ export class GetAll extends Component {
         return (
             <div className='logo'>
                 <h1>Welcome back {this.props.authUser.user.username}! </h1>
-                strains page
                 <div>
                     <Strain />
                     <Race />

@@ -5,3 +5,15 @@
     background-image: url('https://i1.wp.com/stuffstonerslike.com/wp-content/uploads/2015/02/Marijuana-Background.jpg?resize=620%2C387');
     background-color: seagreen;
 }
+.strain-name{
+    color: lightgoldenrodyellow;
+}
+.positive-effects{
+    color:lime
+}
+.negative-effects{
+    color: red
+}
+.medicinal{
+    color: seagreen;
+}

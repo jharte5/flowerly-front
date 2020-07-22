@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import {getAllStrains} from '../../redux/actions/strainActions'
+import './GetAll.css'
 
 export class GetAll extends Component {
 
     state={
         searchQuery: '',
-
     }
 
     handleSearch=(event)=>{
@@ -33,10 +33,26 @@ export class GetAll extends Component {
                 }).map((entry)=>{
                     return(
                         <>
-                            <div>{entry.name}</div>
-                            <ul>{entry.info.effects.positive.map(effect=>{
+                            <h2 className="strain-name">{entry.name}</h2>
+                            <ul>
+                                <h3 className="positive-effects">Positive Effects</h3>
+                                {entry.info.effects.positive.map(effect=>{
                                 return(
-                                    <li>{effect}</li>
+                                    <li className="positive-effects">{effect}</li>
+                                )
+                            })}</ul>
+                            <ul>
+                                <h3 className="negative-effects">Negative Effects</h3>
+                                {entry.info.effects.negative.map(effect=>{
+                                return(
+                                    <li className="negative-effects">{effect}</li>
+                                )
+                            })}</ul>
+                            <ul>
+                                <h3 className='medicinal'>For Medicinal Use</h3>
+                                {entry.info.effects.medical.map(effect=>{
+                                return(
+                                    <li className='medicinal'>{effect}</li>
                                 )
                             })}</ul>
                         </>
