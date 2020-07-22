@@ -115,9 +115,9 @@ color: red;
     outline: none;
   }
   
-  .box input[type="password"] {
+  /* .box input[type="password"] {
     padding-right: 30px;
-  }
+  } */
   
   .box .input-box {
     position: relative;
@@ -164,3 +164,10 @@ color: red;
   .box .signup a, .box .login a {
     color: #4cd137;
   }
+  .logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-image: url('https://i1.wp.com/stuffstonerslike.com/wp-content/uploads/2015/02/Marijuana-Background.jpg?resize=620%2C387');
+    background-color: seagreen;
+}

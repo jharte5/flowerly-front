@@ -19,7 +19,7 @@ class AuthNavLinks extends Component {
                 </li>
                 <li className="left-link">
                     <NavLink
-                        to='/home'
+                        to='/strain'
                         className='navbar'
                         activeStyle={{fontWeight: 'bold'}}
                         activeClassName='selected'

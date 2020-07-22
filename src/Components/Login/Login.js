@@ -121,7 +121,7 @@ export class Login extends Component {
         event.preventDefault();
         const { email, password } = this.state.formConfig;
         try {
-            console.log("MAybe??", email.value)
+            console.log("is that you??", email.value)
             await this.props.loginApi({
                 email:email.value,
                 password: password.value,
@@ -133,8 +133,8 @@ export class Login extends Component {
             inputForm["email"].value = "";
             inputForm["password"].value = "";
     
-            successToast("Welcome Back!");
-            this.props.history.push("/home")
+            successToast("High! welcome back!");
+            this.props.history.push('/strain')
     
         } catch (e) {
             failureToast(e);
@@ -150,10 +150,39 @@ export class Login extends Component {
             });
         }
         return (
-            <div className="signup-container">
-                <h1>Login</h1>
-                <form className="signup-form" onSubmit={this.onSubmit}>
-                    {inputArray.map((element) => {
+            // <div className="signup-container logo">
+            //     <h1>Login</h1>
+            //     <form className="signup-form" onSubmit={this.onSubmit}>
+            //         {inputArray.map((element) => {
+            //             const {
+            //                 formSetting: { name, placeholder, value, error },
+            //             } = element;
+            //             return (
+            //                 <InputGroup
+            //                     key={name}
+            //                     name={name}
+            //                     placeholder={placeholder}
+            //                     onChange={this.onChange}
+            //                     value={value}
+            //                     error={error}
+            //                     type={name}
+            //                 />
+            //             );
+            //         })}
+            //         <ButtonGroup
+            //             buttonStyle="form-button"
+            //             title="Login Here"
+            //             disabled={canSubmit}
+            //         />
+            //     </form>
+            // </div>
+            <body>
+    <div class="box logo">
+      <div class="icon"><i class="fas fa-user-alt"></i></div>
+      <form id="login" onSubmit={this.onSubmit}>
+        <h1>Login</h1>
+        <h2>Email & Password</h2>
+        {inputArray.map((element) => {
                         const {
                             formSetting: { name, placeholder, value, error },
                         } = element;
@@ -169,58 +198,45 @@ export class Login extends Component {
                             />
                         );
                     })}
-                    <ButtonGroup
+                    {/* <ButtonGroup
                         buttonStyle="form-button"
                         title="Login Here"
                         disabled={canSubmit}
-                    />
-                </form>
-            </div>
-//             <body>
-//     <div class="box">
-//       <div class="icon"><i class="fas fa-user-alt"></i></div>
-//       <form id="login" action="#">
-//         <h1>Login</h1>
-//         <h2>Email</h2>
-//         <input class="email" type="text"/>
-//         <h2>Password</h2>
-//         <div class="input-box">
-//           <i class="far fa-eye eye-btn"></i>
-//           <input class="password" type="password"/>
-//         </div>
-//         <button type="submit" value="Login">Login</button>
-//         <span class="grey forgot"><a href="#">Forgot your password?</a></span>
-//         <span class="grey signup">Don't have an account? <a href="#" class="signup-btn">Sign up</a></span>
-//       </form>
+                    /> */}
+        
+        <button type="submit" value="Login">Login</button>
+        
+        <span class="grey signup">Don't have an account? <a href="/sign-up" class="signup-btn">Sign up here</a></span>
+      </form>
       
-//       <form id="signup">
-//         <h1>Sign Up</h1>
-//         <h2>Pick a username</h2>
-//         <div class="input-box">
-//           <input class="username" type="text"/>
-//         </div>
-//         <h2>Enter an e-mail</h2>
-//         <div class="input-box">
-//           <input class="e-mail" type="text" placeholder="example@mail.com"/>
-//         </div>
-//         <div class="input-box">
-//           <input class="password" type="password" placeholder="Repeat your e-mail" disabled/>
-//         </div>
-//         <h2>Choose a password</h2>
-//         <div class="passwords-box">
-//           <div class="input-box">
-//             <i class="far fa-eye eye-btn" alt="looll"></i>
-//             <input class="password" type="password"/>
-//           </div>
-//           <div class="input-box">
-//             <input class="input re" type="password" placeholder="Repeat your password" disasbled/>
-//           </div>
-//         </div>
-//         <button type="submit" value="Sign Up">Sign Up</button>
-//         <span class="grey login">Signed up already? <a href="#">Log in</a></span>
-//       </form>
-//     </div>
-//   </body>
+      <form id="signup">
+        <h1>Sign Up</h1>
+        <h2>Pick a username</h2>
+        <div class="input-box">
+          <input class="username" type="text"/>
+        </div>
+        <h2>Enter an e-mail</h2>
+        <div class="input-box">
+          <input class="e-mail" type="text" placeholder="example@mail.com"/>
+        </div>
+        <div class="input-box">
+          <input class="password" type="password" placeholder="Repeat your e-mail" disabled/>
+        </div>
+        <h2>Choose a password</h2>
+        <div class="passwords-box">
+          <div class="input-box">
+            <i class="far fa-eye eye-btn" alt="looll"></i>
+            <input class="password" type="password"/>
+          </div>
+          <div class="input-box">
+            <input class="input re" type="password" placeholder="Repeat your password" disasbled/>
+          </div>
+        </div>
+        <button type="submit" value="Sign Up">Sign Up</button>
+        <span class="grey login">Signed up already? <a href="#">Log in</a></span>
+      </form>
+    </div>
+  </body>
         )
     }
 }

@@ -1,8 +1,9 @@
 import {combineReducers} from 'redux';
 import authUserReducer from './authUserReducer'
-// import friendReducer from './friendReducer.js'
+import strainReducer from './strainReducers'
+
 
 export default combineReducers({
     authUser: authUserReducer,
-    // friend: friendReducer,
+    strainR: strainReducer    
 })     

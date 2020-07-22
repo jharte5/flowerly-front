@@ -24,7 +24,8 @@ export const loginApi = (userInfo) => async (dispatch) => {
             "/users/login",
             userInfo
         );
-        const { jwtToken } = success.data;
+        console.log(success.data)
+        const { jwtToken } = success.data.token;
         dispatch(setAuthSuccessUser(jwtToken));
         return Promise.resolve();
     } catch (e) {
@@ -37,6 +38,7 @@ export const loginApi = (userInfo) => async (dispatch) => {
     }
 };
 export const setAuthSuccessUser = (jwtToken) => (dispatch) => {
+    console.log(jwtToken)
     setAuthToken(jwtToken);
     localStorage.setItem("jwtToken", jwtToken);
     let decoded = jwt_decode(jwtToken);

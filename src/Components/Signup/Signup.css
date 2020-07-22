@@ -1,4 +1,4 @@
-.signup-container {
+/* .signup-container {
     text-align: center;
 }
 .signup-container h1 {
@@ -39,4 +39,136 @@ border-color: red;
 }
 .invalid-message {
 color: red;
+} */
+
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    color: black;
+    font-family: 'Lato'
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  body {
+    background-color: #f5f6fa;
+  }
+  
+  #login {
+    display: none;
+  }
+  
+  #signup {
+    display: block;
+  }
+  
+  .icon {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    padding: 20px;
+    background: #44bd32;
+    border-radius: 50%;
+  }
+  
+  .icon i {
+    color: #fff;
+    font-size: 2em;
+    text-shadow: 0px 0px 1px #2f3640;
+  }
+  
+  .box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    background-color: #fff;
+    box-shadow: 10px 10px 20px #ccc;
+    padding: 40px;
+  }
+  
+  .box h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.5em;
+    margin: 15px 0 15px 0;
+  }
+  
+  .box h2 {
+    font-size: 1em;
+    margin-bottom: 5px;
+  }
+  
+  .box input, .box button {
+    display: block;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #718093;
+    outline: none;
+  }
+  
+  /* .box input[type="password"] {
+    padding-right: 30px;
+  } */
+  
+  .box .input-box {
+    position: relative;
+  }
+  
+  .box .input-box i {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    color: #2f3640;
+    cursor: pointer;
+  }
+  
+  .box button {
+    display: block;
+    border: 0;
+    margin: 0px 0 20px 0;
+    background: #44bd32;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1em;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 1px #2f3640;
+    cursor: pointer;
+    transition: all .3s;
+  }
+  
+  .box button:hover {
+    background: #047d02;
+  }
+  
+  .box .grey {
+    display: block;
+    color: #718093;
+  }
+  
+  .box .grey a {
+    color: #4cd137;
+    colsor: #a1b0c3;
+  }
+  
+  .box .signup a, .box .login a {
+    color: #4cd137;
+  }
+  .logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-image: url('https://i1.wp.com/stuffstonerslike.com/wp-content/uploads/2015/02/Marijuana-Background.jpg?resize=620%2C387');
+    background-color: seagreen;
 }

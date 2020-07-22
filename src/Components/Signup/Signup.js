@@ -6,6 +6,7 @@ import { signupApi } from '../../redux/actions/authUserActions'
 import validator from 'validator'
 import InputGroup from '../SharedGroup/InputGroup';
 import ButtonGroup from '../SharedGroup/ButtonGroup'
+import './Signup.css'
 
 export class Signup extends Component {
     state = {
@@ -181,13 +182,17 @@ export class Signup extends Component {
             })
         }
         return (
-            <div className="signup-container">
-                <h1>Sign up</h1>
-                <form className="signup-form" onSubmit={this.onSubmit}>
-                    {inputArray.map((element) => {
+            <body>
+    <div class="box logo">
+      <div class="icon"><i class="fas fa-user-alt"></i></div>
+      <form id="signup" onSubmit={this.onSubmit}>
+        <h1>Sign Up</h1>
+        <h2>Pick a username</h2>
+        <div class="input-box">
+        {inputArray.map((element) => {
                         const {
-                            formSetting: {name, placeholder, value, error}
-                        } = element
+                            formSetting: { name, placeholder, value, error },
+                        } = element;
                         return (
                             <InputGroup
                                 key={name}
@@ -198,15 +203,45 @@ export class Signup extends Component {
                                 error={error}
                                 type={name}
                             />
-                        )
+                        );
                     })}
-                    <ButtonGroup
-                        buttonStyle="form-button"
-                        title="Sign up"
-                        disabled={canSubmit}
-                    />
-                </form>
-            </div>
+        </div>
+        
+        
+        <button type="submit" value="Sign Up">Sign Up</button>
+        <span class="grey login">Signed up already? <a href="/login">Log in</a></span>
+      </form>
+    </div>
+  </body>
+
+
+
+            // <div className="signup-container">
+            //     <h1>Sign up</h1>
+            //     <form className="signup-form" onSubmit={this.onSubmit}>
+            //         {inputArray.map((element) => {
+            //             const {
+            //                 formSetting: {name, placeholder, value, error}
+            //             } = element
+            //             return (
+            //                 <InputGroup
+            //                     key={name}
+            //                     name={name}
+            //                     placeholder={placeholder}
+            //                     onChange={this.onChange}
+            //                     value={value}
+            //                     error={error}
+            //                     type={name}
+            //                 />
+            //             )
+            //         })}
+            //         <ButtonGroup
+            //             buttonStyle="form-button"
+            //             title="Sign up"
+            //             disabled={canSubmit}
+            //         />
+            //     </form>
+            // </div>
         )
     }
 }
