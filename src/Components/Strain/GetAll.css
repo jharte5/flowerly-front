@@ -1,19 +1,33 @@
-.logo{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    background-image: url('https://i1.wp.com/stuffstonerslike.com/wp-content/uploads/2015/02/Marijuana-Background.jpg?resize=620%2C387');
-    background-color: seagreen;
+.logo {
+  /* justify-content: center; */
+  background-image: url("https://i1.wp.com/stuffstonerslike.com/wp-content/uploads/2015/02/Marijuana-Background.jpg?resize=620%2C387");
+  background-color: seagreen;
 }
-.strain-name{
-    color: lightgoldenrodyellow;
+.strain-name {
+  color: lightgoldenrodyellow;
 }
-.positive-effects{
-    color:lime
+.positive-effects {
+  color: lime;
 }
-.negative-effects{
-    color: red
+.negative-effects {
+  color: red;
 }
-.medicinal{
-    color: seagreen;
+.medicinal {
+  color: seagreen;
+}
+.card {
+  display: inline-block;
+  opacity: 90%;
+  width: 18%;
+  margin: 15px 1%;
+  background-color: white;
+  max-height: 430px;
+  overflow: scroll;
+  padding: 10px;
+}
+
+.card-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }

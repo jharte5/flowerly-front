@@ -28,6 +28,17 @@ class AuthNavLinks extends Component {
                         Strains
                     </NavLink>
                 </li>
+                <li className="left-link">
+                    <NavLink
+                        to='/race'
+                        className='navbar'
+                        activeStyle={{fontWeight: 'bold'}}
+                        activeClassName='selected'
+                        
+                    >
+                        Race
+                    </NavLink>
+                </li>
                 <li>
                     <NavLink
                         to="/login"

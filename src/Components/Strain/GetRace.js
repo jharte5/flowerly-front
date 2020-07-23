@@ -1,14 +1,16 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import Strain from './Strain'
+import Race from './Race'
 import './GetAll.css'
-export class GetAll extends Component {
+
+export class GetRace extends Component {
     render() {
         return (
             <div className='logo'>
-                {/* <h1>Welcome back {this.props.authUser.user.username}! </h1> */}
+                <h1>High {this.props.authUser.user.username}!</h1>
+                <h2>Search cannabis by Race(Sativa, Indica, Hybrid) here</h2>
                 <div>
-                    <Strain />
+                    <Race />
                 </div>
             </div>
         )
@@ -17,7 +19,6 @@ export class GetAll extends Component {
 
 const mapStateToProps = (state) => ({
     authUser: state.authUser,
-    // searchByStrain: state.searchByStrain,
     searchByRace: state.searchByRace
 })
 
@@ -25,4 +26,4 @@ const mapDispatchToProps = {
     
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(GetAll)
+export default connect(mapStateToProps, mapDispatchToProps)(GetRace)
