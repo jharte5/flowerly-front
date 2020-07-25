@@ -1,0 +1,33 @@
+.resources {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: gold;
+}
+
+.player-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: seagreen;
+    width: 100%;
+}
+
+.resource-link:hover {
+    text-decoration: underline;
+    color: gold;
+}
+.resource-link{
+    color:seagreen
+}
+img {
+    margin-top: 1.5rem;
+    width: 20rem;
+}
+.logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url('https://i1.wp.com/stuffstonerslike.com/wp-content/uploads/2015/02/Marijuana-Background.jpg?resize=620%2C387');
+    background-color: seagreen;
+}

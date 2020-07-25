@@ -4,7 +4,7 @@
   background-color: seagreen;
 }
 .strain-name {
-  color: lightgoldenrodyellow;
+  color: green
 }
 .positive-effects {
   color: lime;
@@ -30,4 +30,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.head-text{
+    color: gold;
 }

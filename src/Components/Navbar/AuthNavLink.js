@@ -39,6 +39,17 @@ class AuthNavLinks extends Component {
                         Race
                     </NavLink>
                 </li>
+                <li className="left-link">
+                    <NavLink
+                        to='/resources'
+                        className='navbar'
+                        activeStyle={{fontWeight: 'bold'}}
+                        activeClassName='selected'
+                        
+                    >
+                        Cannabis 101
+                    </NavLink>
+                </li>
                 <li>
                     <NavLink
                         to="/login"

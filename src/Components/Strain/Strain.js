@@ -4,29 +4,29 @@ import { getAllStrains } from "../../redux/actions/strainActions";
 import "./GetAll.css";
 
 export class GetAll extends Component {
-  state = {
-    searchQuery: "",
-  };
+    state = {
+        searchQuery: "",
+    };
 
-  handleSearch = (event) => {
-    this.setState({ searchQuery: event.target.value });
-  };
-  componentDidMount() {
-    this.props.getAllStrains();
-  }
+    handleSearch = (event) => {
+        this.setState({ searchQuery: event.target.value });
+    };
+    componentDidMount() {
+        this.props.getAllStrains();
+    }
 
-  render() {
+    render() {
     // this.props.getAllStrains().map()
-    console.log(this.props);
-    return (
-      <div>
+        console.log(this.props);
+        return (
         <div>
-          <input
-            className="search"
-            value={this.state.searchQuery}
-            onChange={this.handleSearch}
-          />
-        </div>
+            <div>
+                <input
+                className="search"
+                value={this.state.searchQuery}
+                onChange={this.handleSearch}
+                />
+            </div>
 
         {/* <br />
                 <div className='card'>
@@ -41,7 +41,7 @@ export class GetAll extends Component {
                     <p className='card-content'>negative effects</p>
                     <p className='card-content'>medicinal uses</p>
                 </div> */}
-        <div className="card-flex">
+            <div className="card-flex">
           {this.props.allStrains
             .filter((item) => {
               if (!this.state.searchQuery) {
@@ -88,7 +88,7 @@ export class GetAll extends Component {
         </div>
       </div>
     );
-  }
+    }
 }
 
 const mapStateToProps = (state) => ({

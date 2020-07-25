@@ -6,7 +6,8 @@ export class GetAll extends Component {
     render() {
         return (
             <div className='logo'>
-                {/* <h1>Welcome back {this.props.authUser.user.username}! </h1> */}
+                <h1 className='head-text'>Welcome {this.props.authUser.user.username}! </h1>
+                <h3 className='head-text'>Search by strain</h3>
                 <div>
                     <Strain />
                 </div>

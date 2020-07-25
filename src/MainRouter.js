@@ -9,6 +9,7 @@ const Footer = React.lazy(() => import('./Components/Footer/Footer'))
 const GetAll = React.lazy(() => import('./Components/Strain/GetAll'))
 const GetRace = React.lazy(() => import('./Components/Strain/GetRace'))
 const Landing = React.lazy(() => import('./Components/Landing/Landing'))
+const Resources = React.lazy(() => import('./Components/Resources/Resources'))
 
 export default class MainRouter extends Component {
     render() {
@@ -17,6 +18,7 @@ export default class MainRouter extends Component {
                 <Navbar />
                 <Toastify />
                 <Switch>
+                    <Route exact path='/resources' component={Resources}/>
                     <Route exact path='/sign-up' component={Signup}/>
                     <Route exact path='/login' component={Login}/>
                     <Route exact path='/strain' component={GetAll}/>

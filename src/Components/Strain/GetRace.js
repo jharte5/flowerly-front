@@ -7,8 +7,8 @@ export class GetRace extends Component {
     render() {
         return (
             <div className='logo'>
-                <h1>High {this.props.authUser.user.username}!</h1>
-                <h2>Search cannabis by Race(Sativa, Indica, Hybrid) here</h2>
+                <h1 className='head-text'>High {this.props.authUser.user.username}!</h1>
+                <h3 className='head-text'>Search by Race(Sativa, Indica, Hybrid)</h3>
                 <div>
                     <Race />
                 </div>
