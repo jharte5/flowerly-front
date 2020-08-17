@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import validator from 'validator'
 import InputGroup from '../SharedGroup/InputGroup'
-import ButtonGroup from '../SharedGroup/ButtonGroup'
 import {successToast, failureToast} from '../Toastify/Toast'
 import {loginApi} from '../../redux/actions/authUserActions'
 import {connect} from 'react-redux'
@@ -142,7 +141,7 @@ export class Login extends Component {
     };
     
     render() {
-        const { canSubmit, formSetting } = this.state;
+        const { formSetting } = this.state;
         let inputArray = [];
         for (let key in formSetting) {
             inputArray.push({

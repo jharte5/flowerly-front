@@ -18,7 +18,7 @@
     color: gold;
 }
 .resource-link{
-    color:seagreen
+    color:red
 }
 img {
     margin-top: 1.5rem;
@@ -30,4 +30,7 @@ img {
     justify-content: center;
     background-image: url('https://i1.wp.com/stuffstonerslike.com/wp-content/uploads/2015/02/Marijuana-Background.jpg?resize=620%2C387');
     background-color: seagreen;
+}
+h2 {
+    color: red;
 }

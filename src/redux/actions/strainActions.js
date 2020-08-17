@@ -1,4 +1,3 @@
-import Axios from '../lib/Axios/Axios'
 import axios from 'axios'
 import {GET_ALL_STRAINS, GET_BY_RACE} from '../constants/strainConstants'
 

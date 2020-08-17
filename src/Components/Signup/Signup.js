@@ -5,7 +5,6 @@ import { successToast, failureToast } from '../Toastify/Toast';
 import { signupApi } from '../../redux/actions/authUserActions'
 import validator from 'validator'
 import InputGroup from '../SharedGroup/InputGroup';
-import ButtonGroup from '../SharedGroup/ButtonGroup'
 import './Signup.css'
 
 export class Signup extends Component {
@@ -174,7 +173,7 @@ export class Signup extends Component {
         }
     };
     render() {
-        const {canSubmit, formSetting} = this.state
+        const { formSetting} = this.state
         let inputArray = []
         for (let key in formSetting) {
             inputArray.push({

@@ -1,6 +1,6 @@
 import setAuthToken from '../lib/Axios/SetAuthToken'
 import jwt_decode from "jwt-decode";
-import { SIGN_UP, LOGIN, LOGOUT} from '../constants/authUserConstants'
+import { LOGIN, LOGOUT } from '../constants/authUserConstants'
 import axios from '../lib/Axios/Axios'
 
 export const signupApi = (userInfo) =>  async (dispatch) => {
